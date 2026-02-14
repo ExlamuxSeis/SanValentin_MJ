@@ -5,6 +5,8 @@ createApp({
     data(){
         return{
 
+            playing: false,
+
             nombre: "Mi Princesa",
 
             mostrarCarta: false,
@@ -27,6 +29,18 @@ createApp({
     methods:{
         toggleCarta(){
             this.mostrarCarta = !this.mostrarCarta
+        },
+        toggleMusic() {
+
+        const audio = this.$refs.audio;
+
+            if (!this.playing) {
+                audio.play();
+                this.playing = true;
+            } else {
+                audio.pause();
+                this.playing = false;
+            }
         },
 
         actualizarTiempo(){

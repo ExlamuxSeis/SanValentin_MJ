@@ -198,6 +198,16 @@
 </section>
 
 
+    <!-- AUDIO -->
+    <audio ref="audio" loop>
+        <source src="assets/audio/Álvaro Díaz - Reina Pepiada.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- BOTÓN MÚSICA -->
+    <button class="music-btn" @click="toggleMusic">
+        <span v-if="!playing">🎵</span>
+        <span v-else>⏸</span>
+    </button>
 
     </div>
 

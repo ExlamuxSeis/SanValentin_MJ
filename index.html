@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feliz San Valentín ❤️</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="glass-card text-center">
+
+                <h1 class="mb-3">
+                    Feliz San Valentín {{ nombre }} ❤️
+                </h1>
+
+                <p class="mb-4">
+                    Gracias por hacer mi vida más bonita todos los días
+                </p>
+
+                <button class="btn btn-love" @click="toggleCarta">
+                    {{ mostrarCarta ? "Cerrar carta 💌" : "Leer carta 💖" }}
+                </button>
+
+                <!-- CARTA -->
+                <transition name="fade">
+                    <div v-if="mostrarCarta" class="mt-4">
+                    <p class="fs-5">
+                        Hoy quiero tomarme un momento para escribirte algo que siento todos los días, pero que a veces
+                        las palabras no alcanzan a expresar. Desde que llegaste a mi vida, todo cambió. Lo que antes era
+                        rutina ahora tiene emoción, lo que antes era simple ahora tiene significado.
+                        <br><br>
+                        Gracias por tu amor tan sincero, por tu paciencia, por tu manera tan hermosa de cuidarme y
+                        apoyarme. Gracias por cada risa compartida, por cada abrazo que me devuelve la calma, por cada
+                        mirada que me hace sentir que estoy exactamente donde debo estar.
+                        <br><br>
+                        Contigo aprendí que el amor no se trata de perfección, sino de conexión. De elegirnos cada día.
+                        De caminar juntos, incluso cuando el camino no es sencillo. Y yo te elijo, hoy, mañana y
+                        siempre.
+                        <br><br>
+                        Me encanta tu sonrisa, tu forma de ver la vida, la manera en que haces que todo sea más ligero y
+                        más bonito. Eres mi lugar seguro, mi alegría constante y mi motivación para ser mejor persona.
+                        <br><br>
+                        Quiero seguir construyendo sueños contigo. Seguir sumando recuerdos, planes, metas y momentos
+                        que nos hagan sonreír cuando los recordemos. Quiero que este amor siga creciendo fuerte, sincero
+                        y lleno de luz.
+                        <br><br>
+                        Gracias por existir, gracias por amarme, gracias por ser tú.
+                        <br><br>
+                        <strong>Siempre tuyo, ¡Te amo! ❤️</strong>
+                    </p>
+                    </div>
+                </transition>
+
+            </div>
+
+        </section>
+
+        <!-- CONTADOR -->
+        <section class="container my-5">
+            <div class="row justify-content-center text-center">
+
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="counter-box">
+                        <h4>{{ tiempo.dias }}</h4>
+                        <small>Días</small>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="counter-box">
+                        <h4>{{ tiempo.horas }}</h4>
+                        <small>Horas</small>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="counter-box">
+                        <h4>{{ tiempo.minutos }}</h4>
+                        <small>Minutos</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="counter-box">
+                        <h4>{{ tiempo.segundos }}</h4>
+                        <small>Segundos</small>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!-- GALERÍA -->
+<section class="container my-5">
+
+    <div id="carouselLove"
+            class="carousel carousel-fade shadow-lg romantic-carousel"
+            data-bs-ride="carousel"
+            data-bs-interval="4000">
+
+        <!-- Indicadores -->
+        <div class="carousel-indicators custom-indicators">
+            <button type="button" data-bs-target="#carouselLove" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselLove" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselLove" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselLove" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselLove" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#carouselLove" data-bs-slide-to="5"></button>
+        </div>
+
+        <div class="carousel-inner rounded-5 overflow-hidden">
+
+            <div class="carousel-item active">
+                <div class="img-wrapper">
+                    <img src="assets/img/m_j.jpg" class="d-block w-100">
+                    <div class="carousel-caption romantic-caption">
+                        Que hermosa te ves ❤️
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="img-wrapper">
+                    <img src="assets/img/_mj_.jpg" class="d-block w-100">
+                    <div class="carousel-caption romantic-caption">
+                        Te amo 💝
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="img-wrapper">
+                    <img src="assets/img/mj_.jpg" class="d-block w-100">
+                    <div class="carousel-caption romantic-caption">
+                        Te amo 💝
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="img-wrapper">
+                    <img src="assets/img/mj___.jpg" class="d-block w-100">
+                    <div class="carousel-caption romantic-caption">
+                        Momentos inolvidables 💕
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="img-wrapper">
+                    <img src="assets/img/mj.jpg" class="d-block w-100">
+                    <div class="carousel-caption romantic-caption">
+                        Mi lugar favorito es donde estás conmigo 💖
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="img-wrapper">
+                    <img src="assets/img/mj__.jpg" class="d-block w-100">
+                    <div class="carousel-caption romantic-caption">
+                        Te amo 💝
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controles -->
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselLove" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon custom-control"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselLove" data-bs-slide="next">
+            <span class="carousel-control-next-icon custom-control"></span>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- App -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

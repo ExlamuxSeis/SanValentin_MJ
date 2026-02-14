@@ -1,0 +1,141 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    background: url('../assets/img/fondo.png') center/cover no-repeat fixed;
+    position:relative;
+    overflow-x:hidden;
+}
+
+/* Capa suave encima del fondo */
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(to bottom, rgba(255,118,156,0.6), rgba(255,182,193,0.5));
+    backdrop-filter: blur(3px);
+    z-index:-1;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    color:white;
+}
+
+/* Título elegante */
+.hero h1{
+    font-weight:700;
+    font-size:3rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Botón romántico */
+.btn-love{
+    background: linear-gradient(135deg, #ff4d6d, #ff758f);
+    border:none;
+    color:white;
+    border-radius:50px;
+    padding:12px 35px;
+    font-weight:600;
+    box-shadow: 0 10px 25px rgba(255,77,109,0.4);
+    transition: all .3s ease;
+}
+
+.btn-love:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255,77,109,0.6);
+}
+
+/* Tarjeta tipo cristal */
+.glass-card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    border-radius:30px;
+    padding:40px;
+    color:rgb(122, 20, 122);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border:1px solid rgba(255,255,255,0.3);
+}
+
+/* Contador */
+.counter-box{
+    background: rgba(255,255,255,0.2);
+    border-radius:25px;
+    padding:25px;
+    backdrop-filter: blur(10px);
+    color:rgb(122, 20, 122);
+    transition: all .3s ease;
+}
+
+.counter-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.counter-box h4{
+    font-size:2rem;
+    margin:0;
+}
+
+.romantic-carousel {
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+    transition: transform 6s ease;
+}
+
+/* efecto zoom suave */
+.carousel-item.active img {
+    transform: scale(1.05);
+}
+
+/* overlay romántico */
+.img-wrapper {
+    position: relative;
+}
+
+.img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+
+/* texto encima */
+.romantic-caption {
+    font-size: 1.4rem;
+    font-weight: 600;
+    bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* indicadores bonitos */
+.custom-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    border: none;
+}
+
+.custom-indicators .active {
+    opacity: 1;
+    background-color: #ff4d6d;
+}
+
+/* flechas suaves */
+.custom-control {
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.8));
+}
